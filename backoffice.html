@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Marketplace</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="backoffice.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand ps-4" href="#">Marketplace</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Backoffice</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Categorie
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Smartphone</a></li>
+                                <li><a class="dropdown-item" href="#">Laptop</a></li>
+                                <li><a class="dropdown-item" href="#">Auricolari</a></li>
+                                <li><a class="dropdown-item" href="#">Monitor</a></li>
+                                <li><a class="dropdown-item" href="#">Tastiera</a></li>
+                                <li><a class="dropdown-item" href="#">Fotocamera</a></li>
+                                <li><a class="dropdown-item" href="#">Accessori</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Brand
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">ASUS</a></li>
+                                <li><a class="dropdown-item" href="#">Samsung</a></li>
+                                <li><a class="dropdown-item" href="#">Apple</a></li>
+                                <li><a class="dropdown-item" href="#">Sony</a></li>
+                                <li><a class="dropdown-item" href="#">LG</a></li>
+                                <li><a class="dropdown-item" href="#">Corsair</a></li>
+                                <li><a class="dropdown-item" href="#">Razer</a></li>
+                                <li><a class="dropdown-item" href="#">DXRacer</a></li>
+                                <li><a class="dropdown-item" href="#">Anker</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex me-3" role="search" id="searchForum">
+                        <input class="form-control me-0" id="searchInput" type="search" placeholder="Search">
+                        <button class="btn btn-outline-success" type="submit" id="searchbutton"><i
+                                class="bi bi-search"></i></button>
+                    </form>
+                    <div class="cart-container">
+                        <button id="cartButton"><i class="bi bi-cart-fill"></i> (<span id="cartCount">0</span>)</button>
+                        <div id="cartDropdown" class="cart-dropdown">
+                            <div id="cartContainer"></div>
+
+                        </div>
+                    </div>
+                    <div class="btn-group mx-3">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                            data-bs-display="static" aria-expanded="false">Login
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-lg-end">
+                            <li><button class="dropdown-item" type="button">Your Account></li>
+                            <li><button class="dropdown-item" type="button">Your Orders</button></li>
+                            <li><button class="dropdown-item" type="button">Your Lists</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-fluid mt-4">
+        <h1 class="text-center m-3">Marketplace Backoffice</h1>
+
+        <div class="container my-3">
+            <h3>Aggiungi un nuovo prodotto</h3>
+            <form id="addProductForm" class="d-flex gap-2">
+                <input type="text" id="newName" class="form-control" placeholder="Nome" required />
+                <input type="text" id="newDescription" class="form-control" placeholder="Descrizione" required />
+                <input type="text" id="newBrand" class="form-control" placeholder="Brand" required />
+                <input type="text" id="newImageUrl" class="form-control" placeholder="URL Immagine" required />
+                <input type="number" id="newPrice" class="form-control" placeholder="Prezzo" required />
+                <button type="submit" class="btn btn-success">Aggiungi</button>
+            </form>
+        </div>
+
+        <div class="container my-3">
+            <input type="text" id="searchBar" class="form-control" placeholder="Cerca un prodotto..." />
+        </div>
+
+        <div class="container-fluid px-4 my-4">
+            <table class="table">
+                <thead class="table-secondary">
+                    <tr>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Descrizione</th>
+                        <th scope="col">Brand</th>
+                        <th scope="col">Immagine</th>
+                        <th scope="col">Prezzo</th>
+                        <th scope="col">Azioni</th>
+                    </tr>
+                </thead>
+                <tbody id="tabeleProd"></tbody>
+            </table>
+        </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+    <!-- <script src="backoffice.js"></script> -->
+    <script src="backofficeJS/fetchAndDisplay.js"></script>
+    <script src="backofficeJS/manageProducts.js"></script>
+    <script src="backofficeJS/editProduct.js"></script>
+
+</body>
+
+</html>

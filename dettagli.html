@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Marketplace Dettagli</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand ps-4" href="#">Marketplace</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Backoffice</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Categorie
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Smartphone</a></li>
+                                <li><a class="dropdown-item" href="#">Laptop</a></li>
+                                <li><a class="dropdown-item" href="#">Auricolari</a></li>
+                                <li><a class="dropdown-item" href="#">Monitor</a></li>
+                                <li><a class="dropdown-item" href="#">Tastiera</a></li>
+                                <li><a class="dropdown-item" href="#">Fotocamera</a></li>
+                                <li><a class="dropdown-item" href="#">Accessori</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Brand
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">ASUS</a></li>
+                                <li><a class="dropdown-item" href="#">Samsung</a></li>
+                                <li><a class="dropdown-item" href="#">Apple</a></li>
+                                <li><a class="dropdown-item" href="#">Sony</a></li>
+                                <li><a class="dropdown-item" href="#">LG</a></li>
+                                <li><a class="dropdown-item" href="#">Corsair</a></li>
+                                <li><a class="dropdown-item" href="#">Razer</a></li>
+                                <li><a class="dropdown-item" href="#">DXRacer</a></li>
+                                <li><a class="dropdown-item" href="#">Anker</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex me-3" role="search" id="searchForum">
+                        <input class="form-control me-0" id="searchInput" type="search" placeholder="Search">
+                        <button class="btn btn-outline-success" type="submit" id="searchbutton"><i class="bi bi-search"></i></button>
+                    </form>
+                    <div class="cart-container">
+                        <button id="cartButton"><i class="bi bi-cart-fill"></i> (<span id="cartCount">0</span>)</button>
+                        <div id="cartDropdown" class="cart-dropdown">
+                            <div id="cartContainer"></div>
+                            
+                        </div>
+                    </div>
+                    <div class="btn-group mx-3">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                            data-bs-display="static" aria-expanded="false">Login
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-lg-end">
+                            <li><button class="dropdown-item" type="button">Your Account></li>
+                            <li><button class="dropdown-item" type="button">Your Orders</button></li>
+                            <li><button class="dropdown-item" type="button">Your Lists</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-5 mb-5">
+        <div class="row">
+            <!-- Immagine a sinistra -->
+            <div class="col-md-6 d-flex justify-content-center">
+                <img id="productImage" src="" alt="Immagine del prodotto" class="img-fluid rounded shadow ">
+            </div>
+    
+            <!-- Info prodotto a destra -->
+            <div class="col-md-6">
+                <h2 id="productName" class="mb-3"></h2>
+                <p id="productDescription" class="text-muted"></p>
+                <p><strong>Brand:</strong> <span id="productBrand"></span></p>
+                <p><strong>Prezzo:</strong> <span id="productPrice" class="text-danger fs-4"></span></p>
+    
+                <!-- Pulsanti -->
+                <button id="addToCartButton" class="btn btn-primary mt-3">Aggiungi al carrello</button>
+                <a href="index.html" class="btn btn-secondary mt-3">Torna al Marketplace</a>
+            </div>
+        </div>
+    </main>    
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Chi siamo</h5>
+                    <p>Breve descrizione della azienda</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Link Utili</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white"></a>Home</li>
+                        <li><a href="#" class="text-white"></a>Servizi</li>
+                        <li><a href="#" class="text-white"></a>Contatti</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Seguici</h5>
+                    <a href="#" class="text-white me-2"><i class="fab fa-facebook bi bi-facebook"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-twitter bi bi-twitter-x"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-instagram bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+    <script src="dettagli.js"></script>
+</body>
+
+</html>
