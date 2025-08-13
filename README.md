@@ -16,20 +16,14 @@ I file elencati sono quelli presenti nella repository e rappresentano le 3 aree 
 
 ----
 
-## **Nota importante (token richiesto)**
-> - Per poter visualizzare e gestire i prodotti devi autenticarti su **Strive School** e usare il **token JWT** nelle pagine del progetto (vedi sezione *Dove inserire il token*).
+## Funzionalità
 
-> 1. Vai su: [https://strive.school/studentlogin](https://strive.school/studentlogin)
-> 2. Effettua il login con le tue credenziali
-> 3. Recupera il token JWT (vedi guida) e incollalo nei file indicati.
+* Visualizzazione **catalogo** con card dei prodotti
+* Visualizzazione **dettaglio** con informazioni estese
+* Backoffice: form per **creare**, **modificare** e **eliminare** prodotti
+* Gestione **stati di caricamento** ed errori base
 
-
-## Come ottenere il token JWT da Strive School
-
-> 1. Apri **[https://strive.school/studentlogin](https://strive.school/studentlogin)** e fai **login**
-> 2. Copia l’intero token (stringa lunga con puntini `xxx.yyy.zzz`)
-
----
+----
 
 ## Requisiti
 
@@ -39,11 +33,23 @@ I file elencati sono quelli presenti nella repository e rappresentano le 3 aree 
 
 ---
 
+## **Nota importante (token richiesto)**
+> - Per poter visualizzare e gestire i prodotti devi autenticarti su **Strive School** e usare il **token JWT** nelle pagine del progetto (vedi sezione **Dove inserire il token**).
+
+
+## Come ottenere il token JWT da Strive School
+
+> 1. Apri **[https://strive.school/studentlogin](https://strive.school/studentlogin)**
+> 2. Effettua **il login** con le tue credenziali
+> 3. Copia l’intero token (stringa lunga con puntini `xxx.yyy.zzz`)
+
+---
+
 ## Come avviare in locale
 
 1. **Clona** o **scarica** questa repository
 2. Apri `index.html` direttamente nel browser (doppio clic) oppure servi il progetto con una estensione tipo *Live Server* (VS Code)
-3. Inserisci il **token JWT** nei file elencati in *Dove inserire il token*
+3. Inserisci il **token JWT** nei file elencati in **Dove inserire il token**
 
 > Non è necessario un backend locale: il progetto chiama l’API remota di Strive School.
 
@@ -62,6 +68,7 @@ Nel progetto, i punti tipici dove inserire/sostituire il token sono:
 
 Cerca nei file le stringhe: `const token = "Bearer ....`, oppure blocchi `fetch(...)`.
 
+
 ### Esempio di inserimento
 
 ```js
@@ -74,18 +81,9 @@ fetch(API_URL, {
     "Authorization": token,
   }
 });
+```
 
 ---
-
-## Funzionalità
-
-* Visualizzazione **catalogo** con card dei prodotti
-* Visualizzazione **dettaglio** con informazioni estese
-* **Backoffice**: form per **creare**, **modificare** e **eliminare** prodotti
-* Gestione **stati di caricamento** ed errori base
-
----
-
 
 ## Problemi comuni
 
@@ -97,7 +95,7 @@ fetch(API_URL, {
 
 ## Licenza
 
-Scegli e aggiungi una licenza (es. MIT) in base alle tue esigenze.
+MIT
 
 ---
 
