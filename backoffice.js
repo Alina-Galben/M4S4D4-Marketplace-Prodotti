@@ -1,5 +1,5 @@
 const endpointAPI = "https://striveschool-api.herokuapp.com/api/product/";
-const authentication = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2JkZWIyZjFlMTQwNjAwMTUzMTRkMTkiLCJpYXQiOjE3NDA0OTk3NTksImV4cCI6MTc0MTcwOTM1OX0.iYeIiB-GigxtCBtwHEx-vVbX6szRTkUbi_AT3Vau7wI";
+const authentication = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2JkZWIyZjFlMTQwNjAwMTUzMTRkMTkiLCJpYXQiOjE3NTQ3NTIwMDAsImV4cCI6MTc1NTk2MTYwMH0.oM2PCRb6ADi_J984CYSrKBTAlpa9tOFjaHNMbUqYLpo";
 
 const resultBox = document.getElementById('tabeleProd');
 const mainContainer = document.querySelector('.container-fluid.mt-4');

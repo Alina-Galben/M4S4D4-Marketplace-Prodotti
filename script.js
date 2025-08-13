@@ -6,7 +6,7 @@
 // Salvare il carrello in local storage per poterlo utilizzare su tutte le pagine del progetto
 
 const apiURL = "https://striveschool-api.herokuapp.com/api/product/";
-const token = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2JkZWIyZjFlMTQwNjAwMTUzMTRkMTkiLCJpYXQiOjE3NDA2NzI1NjcsImV4cCI6MTc0MTg4MjE2N30.qHsk9dZ-QSR9I1kRyr8uFOZzlQ0K38BbwwBZJojQRvY";
+const token = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2JkZWIyZjFlMTQwNjAwMTUzMTRkMTkiLCJpYXQiOjE3NTQ3NTIwMDAsImV4cCI6MTc1NTk2MTYwMH0.oM2PCRb6ADi_J984CYSrKBTAlpa9tOFjaHNMbUqYLpo";
 
 function updateCartUI() {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
