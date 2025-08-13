@@ -95,7 +95,8 @@ fetch(API_URL, {
 
 ## Licenza
 
-MIT
+- Progetto open source, creato a scopo formativo.
+- Sentiti libero di clonarlo, modificarlo o contribuire! 🌟
 
 ---
 
